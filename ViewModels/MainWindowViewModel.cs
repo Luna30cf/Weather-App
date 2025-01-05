@@ -1,4 +1,5 @@
 using ReactiveUI;
+using WeatherApp.UI.Services;
 
 namespace WeatherApp.UI.ViewModels
 {
@@ -6,12 +7,17 @@ namespace WeatherApp.UI.ViewModels
     {
         public SearchViewModel SearchVM { get; }
         public ForecastViewModel ForecastVM { get; }
+        public SettingsViewModel SettingsVM { get; }
 
-        public MainWindowViewModel()
+        private readonly LocalizationService _localizationService;
+
+        public MainWindowViewModel(WeatherService weatherService, OptionsManager optionsManager, LocalizationService localizationService)
         {
-            var svc = new Services.WeatherService();
-            SearchVM = new SearchViewModel(svc);
-            ForecastVM = new ForecastViewModel(svc);
+            _localizationService = localizationService;
+
+            SearchVM = new SearchViewModel(weatherService, optionsManager, _localizationService);
+            ForecastVM = new ForecastViewModel(weatherService, optionsManager, _localizationService);
+            SettingsVM = new SettingsViewModel(optionsManager, _localizationService);
         }
     }
 }

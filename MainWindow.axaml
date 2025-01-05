@@ -1,29 +1,31 @@
 <Window
-    xmlns="https://github.com/avaloniaui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:views="clr-namespace:WeatherApp.UI.Views"
-    x:Class="WeatherApp.UI.MainWindow"
-    Title="Weather App" Width="1000" Height="700"
-    WindowStartupLocation="CenterScreen">
+  x:Class="WeatherApp.UI.MainWindow"
+  xmlns="https://github.com/avaloniaui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:views="clr-namespace:WeatherApp.UI.Views"
+  Title="WeatherApp"
+  Width="800"
+  Height="600">
+
 
 
   <TabControl>
-    <TabItem Header="Recherche">
+    <TabItem Header="{Binding SearchVM.SearchTitle}">
       <views:SearchView DataContext="{Binding SearchVM}" />
     </TabItem>
-    <TabItem Header="Prévisions">
+    <TabItem Header="{Binding ForecastVM.ForecastTitle}">
       <views:ForecastView DataContext="{Binding ForecastVM}" />
+    </TabItem>
+    <TabItem Header="{Binding SettingsVM.SettingsTitle}">
+      <views:SettingsView DataContext="{Binding SettingsVM}" />
     </TabItem>
   </TabControl>
 
   <Window.Background>
-        <LinearGradientBrush EndPoint="0%,100%" StartPoint="-5%,0%">
-            <LinearGradientBrush.GradientStops>
-                <GradientStop Color="#0a1f33" Offset="0.15" />
-                <GradientStop Color="#5dc5e8" Offset="0.8" />
-                <GradientStop Color="#ffd88c" Offset="1" />
-            </LinearGradientBrush.GradientStops>
-        </LinearGradientBrush>
-    </Window.Background>
-
+    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Color="DodgerBlue" Offset="0" />
+        <GradientStop Color="LightSkyBlue" Offset="0.7" />
+        <GradientStop Color="Goldenrod" Offset="1" />
+    </LinearGradientBrush>
+  </Window.Background>
 </Window>

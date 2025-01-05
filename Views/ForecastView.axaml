@@ -2,12 +2,12 @@
              xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <StackPanel Margin="10">
-    <!-- <TextBlock Text="Prévisions" FontSize="18"/> -->
+    <TextBlock Text="Prévisions" FontSize="18"/>
     <StackPanel Orientation="Horizontal" Margin="0,10,0,10">
       <TextBlock Text="Ville:" Margin="0,0,10,0" VerticalAlignment="Center"/>
       <TextBox Width="200" Text="{Binding CityName}"/>
     </StackPanel>
-    <Button Content="Charger"
+    <Button Content="{Binding LoadForecastButton}"
             Command="{Binding LoadForecastCommand}"
             Width="120" />
     <ItemsControl ItemsSource="{Binding Forecasts}" Margin="0,10,0,0">

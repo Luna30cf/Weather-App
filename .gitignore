@@ -1,6 +1,6 @@
 config.json
+options.json
 bin/
 obj/
 .sln
 .manifest
-Views/test.txt

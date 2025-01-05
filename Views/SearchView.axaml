@@ -1,16 +1,49 @@
-<UserControl x:Class="WeatherApp.UI.Views.SearchView"
-             xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-  <StackPanel Margin="10">
-    <!-- <TextBlock Text="Recherche" FontSize="18"/> -->
-    <StackPanel Orientation="Horizontal" Margin="0,10,0,10">
-      <TextBlock Text="Ville:" Margin="0,0,10,0" VerticalAlignment="Center"/>
-      <TextBox Width="200" Text="{Binding CityName}"/>
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="WeatherApp.UI.Views.SearchView">
+  <ScrollViewer>
+    <StackPanel Margin="20" Spacing="10">
+      <!-- Titre de la Recherche -->
+      <TextBlock Text="{Binding SearchTitle}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left"/>
+
+      <!-- Champ de Recherche de Ville -->
+      <StackPanel Orientation="Horizontal" Margin="0,20,0,10" HorizontalAlignment="Center">
+        <TextBlock Text="{Binding CityLabel}" Width="50" VerticalAlignment="Center"/>
+        <TextBox Width="200" Text="{Binding CityName, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Center"/>
+      </StackPanel>
+
+      <!-- Bouton Rechercher -->
+      <Button Content="{Binding SearchButton}" Width="150" Command="{Binding SearchCommand}" HorizontalAlignment="Center"/>
+
+      <!-- Bouton Charger Ville par Défaut -->
+      <Button Content="{Binding LoadDefaultCityButton}" Width="200" Command="{Binding LoadDefaultCityCommand}" HorizontalAlignment="Center" Margin="0,10,0,0"/>
+
+      <!-- Affichage des Résultats de Recherche -->
+      <Border BorderBrush="Gray" BorderThickness="1" Padding="10" Margin="0,20,0,0" CornerRadius="5">
+        <StackPanel>
+          <TextBlock Text="{Binding CityName}" FontSize="18" FontWeight="Bold" HorizontalAlignment="Center"/>
+          <TextBlock Text="{Binding TemperatureLabel}: {Binding Temperature}" FontSize="16" HorizontalAlignment="Center"/>
+          <TextBlock Text="{Binding DescriptionLabel}: {Binding Description}" FontSize="14" HorizontalAlignment="Center"/>
+
+          <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
+            <TextBlock Text="{Binding LatitudeLabel}" FontWeight="Bold" Margin="0,0,5,0"/>
+            <TextBlock Text="{Binding Latitude}" />
+          </StackPanel>
+
+          <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+            <TextBlock Text="{Binding LongitudeLabel}" FontWeight="Bold" Margin="0,0,5,0"/>
+            <TextBlock Text="{Binding Longitude}" />
+          </StackPanel>
+
+          <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
+            <TextBlock Text="{Binding HumidityLabel}" FontWeight="Bold" Margin="0,0,5,0"/>
+            <TextBlock Text="{Binding Humidity}" />
+            <TextBlock Text="%" />
+          </StackPanel>
+
+          <Image Source="{Binding IconUrl}" Width="100" Height="100" HorizontalAlignment="Center" Margin="0,10,0,0"/>
+        </StackPanel>
+      </Border>
     </StackPanel>
-    <Button Content="Rechercher"
-            Command="{Binding SearchCommand}"
-            Width="120"/>
-    <TextBlock Text="{Binding Temperature}" Margin="0,10,0,0"/>
-    <TextBlock Text="{Binding Description}" Margin="0,5,0,0"/>
-  </StackPanel>
+  </ScrollViewer>
 </UserControl>

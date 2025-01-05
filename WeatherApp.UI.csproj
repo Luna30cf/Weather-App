@@ -4,6 +4,7 @@
     <TargetFramework>net9.0</TargetFramework>
     <UseWPF>false</UseWPF>
     <UseWindowsForms>false</UseWindowsForms>
+    <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Avalonia" Version="11.2.3" />
@@ -17,5 +18,11 @@
     <None Include="config.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="options.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <EmbeddedResource Include="Resources\Strings.resx" />
+    <EmbeddedResource Include="Resources\Strings.en.resx" />
+    <EmbeddedResource Include="Resources\Strings.fr.resx" />
   </ItemGroup>
 </Project>
