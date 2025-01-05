@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- Ressources et métadonnées -->
+  <data name="SearchCityTitle" xml:space="preserve">
+    <value>Recherche de Ville</value>
+  </data>
+  <data name="CityLabel" xml:space="preserve">
+    <value>Ville :</value>
+  </data>
+  <data name="SearchButton" xml:space="preserve">
+    <value>Rechercher</value>
+  </data>
+  <data name="TemperatureLabel" xml:space="preserve">
+    <value>Température :</value>
+  </data>
+  <data name="DescriptionLabel" xml:space="preserve">
+    <value>Description :</value>
+  </data>
+  <data name="LatitudeLabel" xml:space="preserve">
+    <value>Latitude :</value>
+  </data>
+  <data name="LongitudeLabel" xml:space="preserve">
+    <value>Longitude :</value>
+  </data>
+  <data name="HumidityLabel" xml:space="preserve">
+    <value>Humidité :</value>
+  </data>
+  <data name="ForecastTitle" xml:space="preserve">
+    <value>Prévisions Météo</value>
+  </data>
+  <data name="LoadForecastButton" xml:space="preserve">
+    <value>Charger Prévisions</value>
+  </data>
+  <data name="SettingsTitle" xml:space="preserve">
+    <value>Paramètres</value>
+  </data>
+  <data name="DefaultCityLabel" xml:space="preserve">
+    <value>Ville par défaut :</value>
+  </data>
+  <data name="LanguageLabel" xml:space="preserve">
+    <value>Langue :</value>
+  </data>
+  <data name="SaveButton" xml:space="preserve">
+    <value>Enregistrer</value>
+  </data>
+  <data name="CityNotFound" xml:space="preserve">
+    <value>Ville introuvable</value>
+  </data>
+  <data name="ErrorLabel" xml:space="preserve">
+    <value>Erreur :</value>
+  </data>
+  <data name="LoadDefaultCityButton" xml:space="preserve">
+    <value>Charger Ville par Défaut</value>
+  </data>
+</root>

@@ -21,14 +21,24 @@
 
 * **Recherche par ville :**
 
-    -  Le nom de la ville
+    - Le nom de la ville
 
     - La température en degré Celsius
 
     - Courte description du temps
 
+    - La latitude et la longitude de la ville
+
+    - L’humidité
+
 
 * **Prévision :**
+
+    - 5 colonnes
+
+    - Les prévisions météorologiques devront être à 12:00
+
+    - La date de la prévision et l’heure devront être affiché
 
 
 * **Paramètres :**

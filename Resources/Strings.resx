@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="MainTitle" xml:space="preserve">
+    <value>Weather Application</value>
+  </data>
+  <data name="SearchTabHeader" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="ForecastTabHeader" xml:space="preserve">
+    <value>Forecast</value>
+  </data>
+  <data name="SettingsTabHeader" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <!-- Ajoutez d'autres clés par défaut ici -->
+</root>
