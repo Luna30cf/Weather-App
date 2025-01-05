@@ -1,0 +1,16 @@
+<UserControl x:Class="WeatherApp.UI.Views.SearchView"
+             xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <StackPanel Margin="10">
+    <TextBlock Text="Recherche" FontSize="18"/>
+    <StackPanel Orientation="Horizontal" Margin="0,10,0,10">
+      <TextBlock Text="Ville:" Margin="0,0,10,0" VerticalAlignment="Center"/>
+      <TextBox Width="200" Text="{Binding CityName}"/>
+    </StackPanel>
+    <Button Content="Rechercher"
+            Command="{Binding SearchCommand}"
+            Width="120"/>
+    <TextBlock Text="{Binding Temperature}" Margin="0,10,0,0"/>
+    <TextBlock Text="{Binding Description}" Margin="0,5,0,0"/>
+  </StackPanel>
+</UserControl>

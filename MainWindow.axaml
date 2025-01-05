@@ -1,0 +1,20 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:views="clr-namespace:WeatherApp.UI.Views"
+        x:Class="WeatherApp.UI.MainWindow"
+        Title="Weather App" Width="1000" Height="700"
+        WindowStartupLocation="CenterScreen">
+
+  <views:SearchView/>
+
+  <Window.Background>
+        <LinearGradientBrush EndPoint="0%,200%" StartPoint="0%,0%">
+            <LinearGradientBrush.GradientStops>
+                <GradientStop Color="SkyBlue" Offset="0" />
+                <GradientStop Color="AliceBlue" Offset="0.5" />
+                <GradientStop Color="White" Offset="1" />
+            </LinearGradientBrush.GradientStops>
+        </LinearGradientBrush>
+    </Window.Background>
+
+</Window>
