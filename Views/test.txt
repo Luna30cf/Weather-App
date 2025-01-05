@@ -1,0 +1,119 @@
+<Window>
+
+    <!-- Matin clair (Ciel bleu lumineux) -->
+
+    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Color="SkyBlue" Offset="0" />
+        <GradientStop Color="AliceBlue" Offset="0.5" />
+        <GradientStop Color="White" Offset="1" />
+    </LinearGradientBrush>
+
+    <!-- Après-midi ensoleillé (Bleu éclatant) -->
+
+    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Color="DodgerBlue" Offset="0" />
+        <GradientStop Color="LightSkyBlue" Offset="0.7" />
+        <GradientStop Color="Goldenrod" Offset="1" />
+    </LinearGradientBrush>
+    <RadialGradientBrush Center="0.1,0.1" RadiusX="0.5" RadiusY="0.5">
+        <GradientStop Color="White" Offset="0" />
+        <GradientStop Color="Transparent" Offset="1" />
+    </RadialGradientBrush>
+
+    <!--  Soirée calme (Bleu foncé avec un dégradé) -->
+    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Color="MidnightBlue" Offset="0" />
+        <GradientStop Color="DarkSlateBlue" Offset="0.5" />
+        <GradientStop Color="Black" Offset="1" />
+    </LinearGradientBrush>
+
+    <!-- Pluie (Nuances de bleu-gris avec un effet de gouttes) -->
+    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Color="SlateGray" Offset="0" />
+        <GradientStop Color="LightSteelBlue" Offset="0.5" />
+        <GradientStop Color="DimGray" Offset="1" />
+    </LinearGradientBrush>
+
+    <!-- Tempête (Bleu acier et éclairs) -->
+
+    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Color="SteelBlue" Offset="0" />
+        <GradientStop Color="Gray" Offset="0.7" />
+        <GradientStop Color="Black" Offset="1" />
+    </LinearGradientBrush>
+
+
+    <!-- Brouillard -->
+
+    <Window.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="LightSteelBlue" Offset="0" />
+            <GradientStop Color="WhiteSmoke" Offset="1" />
+        </LinearGradientBrush>
+    </Window.Background>
+
+    <Window.Effect>
+        <BlurEffect Radius="10" />
+    </Window.Effect>
+
+
+    <Grid>
+        <!-- Fond sombre -->
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Color="DarkBlue" Offset="0" />
+                <GradientStop Color="MidnightBlue" Offset="0.5" />
+                <GradientStop Color="Black" Offset="1" />
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <!-- Étoiles -->
+        <Canvas>
+            <Ellipse Width="4" Height="4" Fill="White" Canvas.Left="50" Canvas.Top="80" />
+            <Ellipse Width="3" Height="3" Fill="White" Canvas.Left="200" Canvas.Top="150" />
+            <Ellipse Width="5" Height="5" Fill="White" Canvas.Left="120" Canvas.Top="250" />
+            <Ellipse Width="2" Height="2" Fill="White" Canvas.Left="300" Canvas.Top="50" />
+            <Ellipse Width="4" Height="4" Fill="White" Canvas.Left="400" Canvas.Top="200" />
+        </Canvas>
+    </Grid>
+
+
+
+    <Grid>
+        <!-- Fond sombre -->
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Color="SteelBlue" Offset="0" />
+                <GradientStop Color="Gray" Offset="0.5" />
+                <GradientStop Color="Black" Offset="1" />
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <!-- Éclair (rectangle) -->
+        <Rectangle Name="Lightning" Fill="White" Opacity="0" />
+        
+        <!-- Animation des éclairs -->
+        <Grid.Triggers>
+            <EventTrigger RoutedEvent="Loaded">
+                <BeginStoryboard>
+                    <Storyboard RepeatBehavior="Forever">
+                        <DoubleAnimation Storyboard.TargetName="Lightning" 
+                                        Storyboard.TargetProperty="Opacity" 
+                                        From="0" To="1" Duration="0:0:0.1" 
+                                        AutoReverse="True" BeginTime="0:0:2" />
+                        <DoubleAnimation Storyboard.TargetName="Lightning" 
+                                        Storyboard.TargetProperty="Opacity" 
+                                        From="0" To="1" Duration="0:0:0.2" 
+                                        AutoReverse="True" BeginTime="0:0:5" />
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+        </Grid.Triggers>
+    </Grid>
+
+
+
+
+
+
+</Window>

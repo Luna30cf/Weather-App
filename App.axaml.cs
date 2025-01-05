@@ -2,7 +2,6 @@ using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
 using WeatherApp.UI.ViewModels;
-using WeatherApp.UI.Views;
 
 namespace WeatherApp.UI
 {
@@ -12,18 +11,15 @@ namespace WeatherApp.UI
         {
             AvaloniaXamlLoader.Load(this);
         }
-
         public override void OnFrameworkInitializationCompleted()
         {
-            if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
+            if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime d)
             {
-                var weatherService = new Services.WeatherService();
-                desktop.MainWindow = new MainWindow
+                d.MainWindow = new MainWindow
                 {
-                    DataContext = new SearchViewModel(weatherService)
+                    DataContext = new MainWindowViewModel()
                 };
             }
-
             base.OnFrameworkInitializationCompleted();
         }
     }

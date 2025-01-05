@@ -1,0 +1,27 @@
+<UserControl x:Class="WeatherApp.UI.Views.ForecastView"
+             xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <StackPanel Margin="10">
+    <!-- <TextBlock Text="Prévisions" FontSize="18"/> -->
+    <StackPanel Orientation="Horizontal" Margin="0,10,0,10">
+      <TextBlock Text="Ville:" Margin="0,0,10,0" VerticalAlignment="Center"/>
+      <TextBox Width="200" Text="{Binding CityName}"/>
+    </StackPanel>
+    <Button Content="Charger"
+            Command="{Binding LoadForecastCommand}"
+            Width="120" />
+    <ItemsControl ItemsSource="{Binding Forecasts}" Margin="0,10,0,0">
+      <ItemsControl.ItemTemplate>
+        <DataTemplate>
+          <Border BorderBrush="Gray" BorderThickness="1" Padding="5" Margin="5">
+            <StackPanel>
+              <TextBlock Text="{Binding DateText}" FontWeight="Bold"/>
+              <TextBlock Text="{Binding Temp}"/>
+              <TextBlock Text="{Binding Description}"/>
+            </StackPanel>
+          </Border>
+        </DataTemplate>
+      </ItemsControl.ItemTemplate>
+    </ItemsControl>
+  </StackPanel>
+</UserControl>
