@@ -13,17 +13,12 @@
     </TabItem>
     <TabItem Header="Prévisions">
       <views:ForecastView DataContext="{Binding ForecastVM}" />
+      
     </TabItem>
   </TabControl>
 
   <Window.Background>
-        <LinearGradientBrush EndPoint="0%,100%" StartPoint="-5%,0%">
-            <LinearGradientBrush.GradientStops>
-                <GradientStop Color="#0a1f33" Offset="0.15" />
-                <GradientStop Color="#5dc5e8" Offset="0.8" />
-                <GradientStop Color="#ffd88c" Offset="1" />
-            </LinearGradientBrush.GradientStops>
-        </LinearGradientBrush>
-    </Window.Background>
+      <SolidColorBrush Color="#0a1f33"/> 
+  </Window.Background>
 
 </Window>

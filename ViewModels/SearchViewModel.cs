@@ -14,6 +14,7 @@ namespace WeatherApp.UI.ViewModels
             get => _cityName;
             set => this.RaiseAndSetIfChanged(ref _cityName, value);
         }
+        
 
         private string _temperature;
         public string Temperature

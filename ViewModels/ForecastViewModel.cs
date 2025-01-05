@@ -5,6 +5,8 @@ using System.Reactive;
 using System.Threading.Tasks;
 using WeatherApp.UI.Models;
 using WeatherApp.UI.Services;
+using System.Linq;
+
 
 namespace WeatherApp.UI.ViewModels
 {
@@ -16,9 +18,11 @@ namespace WeatherApp.UI.ViewModels
             get => _cityName;
             set => this.RaiseAndSetIfChanged(ref _cityName, value);
         }
+
         public ObservableCollection<ForecastItem> Forecasts { get; } = new ObservableCollection<ForecastItem>();
         public ReactiveCommand<Unit, Unit> LoadForecastCommand { get; }
         private readonly WeatherService _svc;
+
 
         public ForecastViewModel(WeatherService svc)
         {
