@@ -1,5 +1,7 @@
 # <center> Weather App
 
+![logo](Assets/logo.svg)
+
 ## Sommaire
 
 - [I - Fonctionnement](#i---fonctionnement)
@@ -43,6 +45,10 @@
 
 * **Paramètres :**
 
+    - Ville par défaut
+
+    - changement de la langue
+
 
 #### b - Arborescence
 
@@ -61,12 +67,40 @@
     * gestion de l'affichage des données et de l'interaction avec l'utilisateur.
     * Parallèle avec html/css possible
 
+* *[Assets](Assets/):*
+    * icônes faites à la main
+    * exporter via figma donc format svg
+
 ### 2 - Installation
+
+Pour cloner le répository:
+
+```
+https://github.com/Luna30cf/Weather-App.git
+```
+
+
+Pour créer les fichiers.json:
+
+- options.json
+```
+{
+    "lang": "langue choisie (fr pour français, en pour anglais etc)",
+    "defaultCity": "ville choisie"
+  }
+```
+- config.json
+```
+{
+    "ApiKey": "votre clé API"
+  }
+```
+
 
 Pour installer le package NuGet `Newtonsoft.Json` (à la racine):
 
 ```
-WeatherApp> dotnet add package Newtonsoft.Json
+Weather-App> dotnet add package Newtonsoft.Json
 ```
 
 ### 3 - Lancement
@@ -75,7 +109,7 @@ WeatherApp> dotnet add package Newtonsoft.Json
 Pour lancer le projet (à la racine): 
 
 ```
-WeatherApp> dotnet run
+Weather-App> dotnet run
 ```
 
 

@@ -4,7 +4,7 @@
   <ScrollViewer>
     <StackPanel Margin="20" Spacing="10">
       <!-- Titre de la Recherche -->
-      <TextBlock Text="{Binding SearchTitle}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left"/>
+      <TextBlock Text="{Binding SearchTitle}" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"/>
 
       <!-- Champ de Recherche de Ville -->
       <StackPanel Orientation="Horizontal" Margin="0,20,0,10" HorizontalAlignment="Center">
